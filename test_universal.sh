@@ -2,7 +2,7 @@
 set -e
 set -v
 echo "Docker username: $DOCKER_USERNAME"
-echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+echo "$DOCKER_PASSWORD" | docker login registry.gitlab.com -u "$DOCKER_USERNAME" --password-stdin
 docker-compose up -d
 
 if [ -f "C:\\windows\\system32\\drivers\\etc\\hosts" ]; then
