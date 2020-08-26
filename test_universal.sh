@@ -11,10 +11,7 @@ if [ -f "C:\\windows\\system32\\drivers\\etc\\hosts" ]; then
   ~/.epirus/*/bin/epirus.bat version
   exit 0
 fi
-
-sh installer.sh
-echo "Epirus source script content:"
-cat $HOME/.epirus/source.sh
+curl -L get.epirus.io | sh
 echo "Sourcing epirus source script"
 source $HOME/.epirus/source.sh
 echo "Content of bashrc:"
