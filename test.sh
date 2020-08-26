@@ -8,4 +8,5 @@ echo "[ EPIRUS-SMOKE ] Test 1: Running Epirus New"
 epirus new --project-name=Web3App --package=org.com --output-dir=$(pwd)
 cd Web3App
 echo "[ EPIRUS-SMOKE ] Test 2: Deploying to Rinkeby"
+echo $(cat ~/.epirus/.config)
 epirus run rinkeby
