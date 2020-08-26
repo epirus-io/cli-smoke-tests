@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 set -v
+echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 docker-compose up -d
 
 if [ -f "C:\\windows\\system32\\drivers\\etc\\hosts" ]; then
