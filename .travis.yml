@@ -6,5 +6,9 @@ os:
   - osx
   - windows
 
+services:
+  - docker
+
+
 script:
   - ./test.sh
