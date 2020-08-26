@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 set -v
+echo "Docker username: $DOCKER_USERNAME"
 echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 docker-compose up -d
 
