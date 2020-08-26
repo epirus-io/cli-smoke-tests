@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+set -v
 docker-compose up -d
 
 if [ -f "C:\\windows\\system32\\drivers\\etc\\hosts" ]; then
