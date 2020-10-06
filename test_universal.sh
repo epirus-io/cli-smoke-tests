@@ -4,7 +4,7 @@ set -v
 
 if [ -d "C:\\" ]; then
   choco install -y jdk8
-  export JAVA_HOME="C:\\Program Files\\Java\\jdk1.8.0_231"
+  export JAVA_HOME="C:\\Program Files\\Java\\jdk1.8.0_211"
   powershell -executionpolicy bypass "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/epirus-io/epirus-installer/master/installer.ps1'))"
   chmod +x ~/.epirus/*/bin/epirus.bat
   ~/.epirus/*/bin/epirus.bat version
