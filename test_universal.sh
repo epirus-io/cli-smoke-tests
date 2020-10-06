@@ -5,7 +5,9 @@ echo "Docker username: $DOCKER_USERNAME"
 echo "$DOCKER_PASSWORD" | docker login registry.gitlab.com -u "$DOCKER_USERNAME" --password-stdin
 
 if [ -d "C:\\" ]; then
+  find /c/ -name DockerCli.exe
   choco install -y jdk8 docker-compose
+
   "C:\Program Files\Docker\Docker\DockerCli.exe" -SwitchLinuxEngine
   docker-compose up -d
   export JAVA_HOME="C:\\Program Files\\Java\\jdk1.8.0_231"
